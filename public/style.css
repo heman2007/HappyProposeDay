@@ -1,0 +1,102 @@
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  cursor: url("./images/pointer.png"), auto;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  background: #111;
+}
+
+#valentinesButton {
+  display: none;
+  text-decoration: none;
+  position: absolute;
+  background-color: #ffbc2d;
+  border: 2px solid #ffffff;
+  color: #f51010;
+  cursor: pointer;
+  height: 50px;
+  font-size: 16px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border-radius: 10px;
+  top: calc(50% + 150px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#valentinesButton:hover {
+  background-color: #fefefe;
+  color: rgb(0, 86, 245);
+}
+
+#valentinesButton a {
+  text-decoration: none;
+  color: red;
+}
+
+
+#yesButton,
+#noButton {
+  display: none;
+  position: absolute;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+  top: calc(50% + 150px);
+  transition: 0.25s ease;
+}
+
+/* YES */
+#yesButton {
+  left: calc(50% - 80px);
+  background-color: #ffbc2d;
+  color: #f51010;
+}
+
+/* NO */
+#noButton {
+  left: calc(50% + 20px);
+  background-color: #222;
+  color: white;
+}
+
+/* Popup background */
+#celebrationPopup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Image style */
+#celebrationImg {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 20px;
+  box-shadow: 0 0 40px white;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
